@@ -1,0 +1,32 @@
+<section class="banner-area relative">
+    <div class="container">
+        <div class="row fullscreen align-items-center justify-content-center">
+            <div class="banner-left col-lg-6">
+                <img class="d-flex mx-auto img-fluid" src="http://www.postharvest.net.au/images/sendbinary.asp?width=225&path=imagesDB/wysiwyg/thermometer.jpg" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="story-content">
+                    <h6 class="text-uppercase">Primer parcial Internet of things</h6>
+
+                    <h6>Miembros del equipo:</h6>
+                    <ul>
+                        <li>Kevin Gamboa</li>
+                        <li>Adrian Leyva</li>
+                        <li>Jorge Sala</li>
+                        <li>Marco Chavez</li>
+                    </ul>
+
+                    <h2> Aquí puede consultar la temperatura de un sensor remoto :D<br></h2>
+                    <button type="button" class="btn btn-primary" (click)="startGetTemperature()" [disabled]=isStart>Comenzar</button>
+                    <button type="button" class="btn btn-warning" (click)="stopGetTemperature()" [disabled]=!isStart>Detener</button>
+                </div>
+
+                <div class="story-content" *ngIf="isStart">
+                    <h6 class="text-uppercase"></h6>
+                    <h2> La última temperatura registrada es: {{temperature}}℃ a las {{hourTemperature}}, el día {{dateTemperature}}<br></h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
