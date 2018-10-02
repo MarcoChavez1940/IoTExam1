@@ -37,7 +37,7 @@ export class TemperatureComponent implements OnInit {
 
 
           if(this.isStart){
-            setTimeout(() => { this.getLastTemperature(); }, 1000);  
+            setTimeout(() => { this.getLastTemperature(); }, 300);  
           }
           
         }
