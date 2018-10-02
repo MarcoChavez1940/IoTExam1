@@ -28,16 +28,16 @@ export class TemperatureComponent implements OnInit {
 
     response.subscribe(
       result => {
-        if(result[result.length-1].value != undefined){
-          this.temperature = result[result.length-1].value
-          let date:Date = new Date(result[result.length-1].created_at);
+        if(result[0].value != undefined){
+          this.temperature = result[0].value
+          let date:Date = new Date(result[0].created_at);
 
           this.hourTemperature = date.getHours() + ":" + date.getMinutes()
           this.dateTemperature = date.getDay() + "/" + date.getMonth() + "/" + date.getFullYear();
 
 
           if(this.isStart){
-            setTimeout(() => { this.getLastTemperature(); }, 2000);  
+            setTimeout(() => { this.getLastTemperature(); }, 1000);  
           }
           
         }
