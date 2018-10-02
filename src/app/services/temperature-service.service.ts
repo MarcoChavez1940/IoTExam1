@@ -11,7 +11,7 @@ export class TemperatureService {
 
   getLastTemperature(){
     return this.http
-      .get('https://desolate-spire-88402.herokuapp.com/temperatures.json')
+      .get('https://desolate-spire-88402.herokuapp.com/temperatures/1.json')
       .pipe(map(response => response.json()));
   }
     
